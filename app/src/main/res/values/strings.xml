@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LUA STUDIO</string>
+    <string name="app_tagline">Write Lua. Build Faster. Offline.</string>
+</resources>
