@@ -25,21 +25,11 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.luastudio.ai.data.files.PendingFileOpenHolder
 import com.luastudio.ai.data.storage.PreferencesManager
-import com.luastudio.ai.ui.components.ComingSoonScreen
 import com.luastudio.ai.ui.editor.EditorScreen
 import com.luastudio.ai.ui.files.FilesScreen
 import com.luastudio.ai.ui.home.HomeScreen
 import com.luastudio.ai.ui.settings.SettingsScreen
 
-/**
- * Screens that show the bottom navigation bar. Home is reachable from the
- * top-bar logo on any of these, rather than being a bottom-bar tab itself.
- *
- * Note: NavBackStackEntry.destination.route always reports the *declared*
- * route pattern (e.g. "editor?fileId={fileId}"), not the resolved value —
- * so comparing against `Destination.X.route` directly is safe and exact,
- * no prefix-matching needed.
- */
 private val bottomBarRoutes = setOf(
     Destination.Editor.route,
     Destination.AiAssistant.route,
@@ -152,10 +142,7 @@ fun LuaStudioNavGraph(preferencesManager: PreferencesManager) {
                 )
             }
             composable(Destination.Settings.route) {
-                ComingSoonScreen(
-                    title = "Settings",
-                    note = "Editor, appearance, file, and runtime settings land in the next phase."
-                )
+                SettingsScreen(preferencesManager = preferencesManager)
             }
         }
     }
