@@ -29,6 +29,7 @@ import com.luastudio.ai.ui.components.ComingSoonScreen
 import com.luastudio.ai.ui.editor.EditorScreen
 import com.luastudio.ai.ui.files.FilesScreen
 import com.luastudio.ai.ui.home.HomeScreen
+import com.luastudio.ai.ui.settings.SettingsScreen
 
 /**
  * Screens that show the bottom navigation bar. Home is reachable from the
